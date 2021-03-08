@@ -25,3 +25,6 @@ board = [
      ['O', 'R', 'I', 'L'],
      ['H', 'J', 'H', 'U']
     ]
+
+board_instance = Board()
+set_board = board_instance.create()
