@@ -7,6 +7,7 @@ This is a flask web app of boggle. A user can submit words and see how they perf
 ```sh
 git clone && cd boggle-flask
 source .venv/bin/activate
+export FLASK_APP=web_app.py
 flask run
 ```
 

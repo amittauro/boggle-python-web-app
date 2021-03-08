@@ -5,31 +5,6 @@ class Boggle:
         self.found_words = []
         self.user_words = []
 
-    def play(self):
-        self.words()
-        user_input = ''
-        user_words = []
-        print('Boggle!')
-        self.print_board()
-        print("enter words and click enter after each word. When finished and type: 'get results' to view all possible words")
-        while user_input != 'get results':
-            user_input = input()
-            if user_input == 'get results':
-                break
-            elif user_input not in self.found_words:
-                print('incorrect word try again')
-            else:
-                user_words.append(user_input)
-
-        print('your words:')
-        print(user_words)
-        print('your score:')
-        self.score(user_words)
-        print('computer words:')
-        print(self.found_words)
-        print('computer score')
-        self.score(self.found_words)
-
     def score(self, words):
         word_scores = list(map(self.word_to_score, words))
         return(sum(word_scores))
@@ -80,7 +55,3 @@ class Boggle:
         elif self.board[row][col] == letter:
             return True
         return False
-
-    def print_board(self):
-        for row in self.board:
-            print('|'.join(row))
