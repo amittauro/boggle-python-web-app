@@ -19,4 +19,9 @@ class Board:
         for i in range(0, len(l), n):
             yield l[i:i + n]
 
-board = Board().create()
+board = [
+     ['F', 'Y', 'C', 'L'],
+     ['I', 'O', 'M', 'G'],
+     ['O', 'R', 'I', 'L'],
+     ['H', 'J', 'H', 'U']
+    ]
