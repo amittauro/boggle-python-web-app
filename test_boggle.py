@@ -9,7 +9,7 @@ def test_word():
     ]
     dictionary = ['helpful']
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 1
+    assert len(boggle.find_words()) == 1
 
 def test_another_word():
     board = [
@@ -20,7 +20,7 @@ def test_another_word():
     ]
     dictionary = ['hello']
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 1
+    assert len(boggle.find_words()) == 1
 
 def test_route_word():
     board = [
@@ -31,7 +31,7 @@ def test_route_word():
   ]
     dictionary = ['hello']
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 1
+    assert len(boggle.find_words()) == 1
 
 def test_different_letters():
     board = [
@@ -42,7 +42,7 @@ def test_different_letters():
   ]
     dictionary = ['madam']
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 0
+    assert len(boggle.find_words()) == 0
 
 def test_multiple_words():
     board = [
@@ -53,7 +53,7 @@ def test_multiple_words():
   ]
     dictionary = ['hello', 'magic']
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 2
+    assert len(boggle.find_words()) == 2
 
 def test_false_word():
     board = [
@@ -66,7 +66,7 @@ def test_false_word():
         return word.lower()
     dictionary = map(word_lower, ['SETS'])
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 0
+    assert len(boggle.find_words()) == 0
 
 def test_boggle():
     board = [
@@ -79,7 +79,7 @@ def test_boggle():
         return word.lower()
     dictionary = map(word_lower, ['XQAESLKURYIZ', 'DNOT', 'NIZOTS', 'KUDL', 'STONI', 'SEAT', 'ONIYR', 'ZONIY', 'MY', 'SEAN', 'SETS', 'TOO', 'DOT'])
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 8
+    assert len(boggle.find_words()) == 8
 
 def test_boggle_2():
     board = [
@@ -90,4 +90,4 @@ def test_boggle_2():
     ]
     dictionary = ['coif', 'coil', 'coir', 'corm', 'firm', 'giro', 'glim', 'hoof', 'iglu', 'limo', 'limy', 'miri', 'moil', 'moor', 'rimy', 'roil', 'hello', 'goodbye']
     boggle = Boggle(board, dictionary)
-    assert boggle.words() == 16
+    assert len(boggle.find_words()) == 16
