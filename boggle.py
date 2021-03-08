@@ -3,6 +3,7 @@ class Boggle:
         self.board = board
         self.dictionary = dictionary
         self.found_words = []
+        self.user_words = []
 
     def play(self):
         self.words()
@@ -31,7 +32,7 @@ class Boggle:
 
     def score(self, words):
         word_scores = list(map(self.word_to_score, words))
-        print(sum(word_scores))
+        return(sum(word_scores))
 
     def word_to_score(self, word):
         if len(word) > 7:

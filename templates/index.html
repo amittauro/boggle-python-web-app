@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <body>
+    <h1>Boggle</h1>
+    <table>
+    <thead>
+        <tr>
+            <th colspan="4">Board</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for row in board: %}
+        <tr>
+          {% for col in row: %}
+            <td>{{ col }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <form class="" action="/scores" method="post">
+    <label for="word">Enter word here:
+    <input type="text" name="word" value="">
+    </label>
+    <input type="submit" name="" value="Submit">
+  </form>
+  {% with message = get_flashed_messages()[0] %}
+    {% if message %}
+      <p>{{message}}</p>
+    {% endif %}
+  {% endwith %}
+  <a href="/scores">Scores</a>
+  </body>
+</html>
