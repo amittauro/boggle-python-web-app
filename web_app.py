@@ -4,7 +4,7 @@ from dictionary import Dictionary
 from boggle import Boggle
 
 dictionary = Dictionary().read_dict_text_file()
-boggle = Boggle(board, dictionary)
+boggle = Boggle(set_board, dictionary)
 comp_words = boggle.find_words()
 user_words = []
 app = Flask(__name__)
