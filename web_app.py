@@ -1,9 +1,9 @@
 from flask import Flask, session, redirect, url_for, request, render_template, flash
-from board import Board
+from board import board
 from dictionary import Dictionary
 from boggle import Boggle
 
-board = Board().create()
+# board = Board().create()
 dictionary = Dictionary().read_dict_text_file()
 boggle = Boggle(board, dictionary)
 comp_words = boggle.find_words()
