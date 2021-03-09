@@ -3,10 +3,6 @@ class Boggle:
         self.board = board
         self.dictionary = dictionary
 
-    def score(self, words):
-        word_scores = list(map(self._word_to_score, words))
-        return(sum(word_scores))
-
     def find_words(self):
         words = []
         for word in self.dictionary:
@@ -46,9 +42,3 @@ class Boggle:
         elif self.board[row][col] == letter:
             return True
         return False
-
-    def _word_to_score(self, word):
-        if len(word) > 7:
-            return 11
-        scores = { 4: 1, 5: 2, 6: 3, 7: 4 }
-        return scores[len(word)]
