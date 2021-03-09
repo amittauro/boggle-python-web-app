@@ -1,6 +1,6 @@
 # Boggle
 
-This is a flask web app of boggle. A user can submit words and see how they performed compared to the computer. It's relatively slow to load as it uses recursive backtracking to find all of the valid words on the board. Have fun trying to beat the computer!
+This is a flask web app of boggle. A user can submit words and see how they performed compared to the computer. It's relatively slow to load as it uses recursive backtracking to find all the valid words. Have fun trying to beat the computer!
 
 ## Get Started
 
