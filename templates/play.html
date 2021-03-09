@@ -23,14 +23,17 @@
       {% endfor %}
     </tbody>
   </table>
-    <h2>Your words</h2>
-      <p>{{', '.join(user_words)}}</p>
-    <h3>Your score</h3>
-      <p>{{ user_score }}</p>
-    <h2>Computer words</h2>
-      <p>{{', '.join(comp_words)}}</p>
-    <h3>Computer score</h3>
-      <p>{{ comp_score }}</p>
-    <p><a href="/">Play again</a></p>
+  <form class="" action="/words" method="post">
+    <label for="word">Enter word here:
+    <input type="text" name="word" value="">
+    </label>
+    <input type="submit" name="" value="Submit">
+  </form>
+  {% with message = get_flashed_messages()[0] %}
+    {% if message %}
+      <p>{{message}}</p>
+    {% endif %}
+  {% endwith %}
+  <p><a href="/scores">Scores</a></p>
   </body>
 </html>

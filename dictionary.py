@@ -7,3 +7,5 @@ class Dictionary:
         for x in f:
             self.dictionary.append(x[0:-1])
         return self.dictionary
+
+dictionary = Dictionary().read_dict_text_file()
