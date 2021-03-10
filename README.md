@@ -23,4 +23,5 @@ pytest
 - Python
 
 ## Heroku
-- https://boggle-python.herokuapp.com
+
+Deployed at [Heroku](https://boggle-python.herokuapp.com)
